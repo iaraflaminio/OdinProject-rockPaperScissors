@@ -3,12 +3,12 @@ let computerScore = 0
 
 const choices = ["rock", "paper", "scissors"]
 
+playGame()
+
 function getComputerChoice() {
     const random = Math.floor(Math.random() * choices.length)
     return choices[random]
 }
-
-console.log(getComputerChoice())
 
 function getHumanChoice() {
     let choice
@@ -22,8 +22,6 @@ function getHumanChoice() {
 
     return choice
 }
-
-console.log(getHumanChoice())
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -52,11 +50,12 @@ function playGame() {
         console.log(`Round ${i + 1}:`)
         const humanSelection = getHumanChoice()
         const computerSelection = getComputerChoice()
+        console.log(`You chose: ${humanSelection}`)
+        console.log(`Computer chose: ${computerSelection}`)
         playRound(humanSelection, computerSelection)
     }
 }
 
-playGame()
 
 console.log(`Final Score: Human - ${humanScore}, Computer - ${computerScore}`)
 if (humanScore > computerScore) {
