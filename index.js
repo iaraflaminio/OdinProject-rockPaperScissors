@@ -29,4 +29,12 @@ function playRound(humanChoice, computerChoice) {
         scissors: "paper"
     }
 
+    if (winningCases[humanChoice] === computerChoice) {
+        humanScore++
+        console.log(`You win, Human! ${humanChoice.charAt(0) + humanChoice.slice(1)} beats ${computerChoice}`)
+    } else {
+        computerScore++
+        console.log(`You lose, Human! ${computerChoice.charAt(0) + computerChoice.slice(1)} beats ${humanChoice}`)
+    }
+
 }
