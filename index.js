@@ -1,8 +1,9 @@
 let humanScore = 0
 let computerScore = 0
 
+const choices = ["rock", "paper", "scissors"]
+
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"]
     const random = Math.floor(Math.random() * choices.length)
     return choices[random]
 }
@@ -15,3 +16,17 @@ function getHumanChoice() {
 }
 
 console.log(getHumanChoice())
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie!")
+        return
+    }
+}
+
+const winningCases = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+}
+
