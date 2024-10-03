@@ -22,11 +22,11 @@ function playRound(humanChoice, computerChoice) {
         console.log("It's a tie!")
         return
     }
-}
 
-const winningCases = {
-    rock: "scissors",
-    paper: "rock",
-    scissors: "paper"
-}
+    const winningCases = {
+        rock: "scissors",
+        paper: "rock",
+        scissors: "paper"
+    }
 
+}
