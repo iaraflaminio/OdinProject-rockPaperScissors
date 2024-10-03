@@ -47,3 +47,12 @@ function playGame() {
         playRound(humanSelection, computerSelection)
     }
 }
+
+console.log(`Final Score: Human - ${humanScore}, Computer - ${computerScore}`)
+if (humanScore > computerScore) {
+    console.log("Congratulations, Human, you beat me!!!!")
+} else {
+    console.log("Computer wins, haha!")
+}
+
+playGame()
