@@ -5,3 +5,10 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice())
+
+function getHumanChoice() {
+    let choice = prompt("Enter you choice, Human: ")
+    return choice ? choice.toLowerCase() : ""
+}
+
+console.log(getHumanChoice())
