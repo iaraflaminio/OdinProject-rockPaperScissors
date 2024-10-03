@@ -11,8 +11,16 @@ function getComputerChoice() {
 console.log(getComputerChoice())
 
 function getHumanChoice() {
-    let choice = prompt("Enter you choice, Human: ")
-    return choice ? choice.toLowerCase() : ""
+    let choice
+
+    do {
+        choice = prompt("Enter you choice, Human: ").toLowerCase()
+        if (!choices.includes(choice)) {
+           prompt("Invalid choice, please, try again human!")
+        }
+    } while (!choices.includes(choice))
+
+    return choice
 }
 
 console.log(getHumanChoice())
@@ -53,7 +61,7 @@ playGame()
 console.log(`Final Score: Human - ${humanScore}, Computer - ${computerScore}`)
 if (humanScore > computerScore) {
     console.log("Congratulations, Human, you beat me!!!!")
-} else if (computerScore > humanScore){
+} else if (computerScore > humanScore) {
     console.log("Computer wins, haha!")
 } else {
     console.log("Oh, well... it's a tie... is that right?")
